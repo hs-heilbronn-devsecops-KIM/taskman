@@ -17,5 +17,5 @@ class TestReverseString(unittest.TestCase):
         result = reverse_string('hello, world!')
         self.assertEqual(result, '!dlrow ,olleh')
 
-if __name__ == '__main__':
+if __name__  == '__main__':
     unittest.main()
