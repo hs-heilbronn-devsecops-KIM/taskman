@@ -36,3 +36,6 @@ jobs:
 
       - name: Run pylint
         run: pylint taskman
+
+      - name: Run test with cov
+        run: pytest --cov = taskman tests/
