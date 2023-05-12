@@ -75,6 +75,7 @@ jobs:
          context: .
          push: true
          tags: ghcr.io/hs-heilbronn-devsecops-kim/my_package:${{ github.sha }}
+         
 
 
 
