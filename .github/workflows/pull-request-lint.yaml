@@ -44,8 +44,3 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
          token: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
