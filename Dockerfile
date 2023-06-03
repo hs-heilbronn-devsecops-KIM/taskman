@@ -1,3 +1,10 @@
+
+FROM node:13-slim
+WORKDIR /app
+ADD . /app
+
+CMD node server.js
+
 FROM python:3.9
 
 RUN adduser taskman
