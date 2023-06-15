@@ -25,7 +25,7 @@ jobs:
         source: '.'
         region: 'europe-west3'
         env_vars:
-           BACKEND = memory
+          BACKEND = memory
 
     - name: 'Use output'
       run: 'curl "${{ steps.deploy.outputs.url }}"'
