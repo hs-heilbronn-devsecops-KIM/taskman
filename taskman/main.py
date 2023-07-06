@@ -20,7 +20,6 @@ app = FastAPI()
 
 my_backend: Optional[Backend] = None
 
-
 def get_backend() -> Backend:
     global my_backend  # pylint: disable=global-statement
     if my_backend is None:
@@ -61,7 +60,6 @@ def update_task(task_id: str,
                 backend: Annotated[Backend, Depends(get_backend)]) -> None:
     backend.set(task_id, request)
 
-
 @app.post('/tasks')
 def create_task(request: TaskRequest,
                 backend: Annotated[Backend, Depends(get_backend)]) -> str:
@@ -79,5 +77,3 @@ trace.set_tracer_provider(provider)
 
 # Creates a tracer from the global tracer provider
 tracer = trace.get_tracer("my.tracer.name")
-
-FastAPIInstrumentor.instrument_app(app)
